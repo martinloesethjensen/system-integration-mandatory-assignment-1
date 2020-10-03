@@ -1,0 +1,14 @@
+name: main_system
+description: A system that reads from a file a does a http request.
+version: 0.0.1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  http: ^0.12.2
+  xml: ^4.5.1
+  csv: ^4.0.3
+
+dev_dependencies:
+  test: ^1.0.0
