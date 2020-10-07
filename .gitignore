@@ -19,3 +19,8 @@ doc/api/
 *.js_
 *.js.deps
 *.js.map
+
+#User Generator
+NemID_UserGenerator/User Generator/.vs
+NemID_UserGenerator/User Generator/User Generator/bin
+NemID_UserGenerator/User Generator/User Generator/obj
