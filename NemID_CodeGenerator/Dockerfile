@@ -1,24 +1,14 @@
-FROM rust:latest-slim-buster AS base
+FROM rust:latest
 
-ENV USER=root
+WORKDIR /usr/src/app
+COPY . .
 
-WORKDIR /code
-RUN cargo init
-COPY Cargo.toml /code/Cargo.toml
-RUN cargo fetch
-
-COPY src /code/src
-
-CMD [ "cargo", "test", "--offline" ]
-
-FROM base AS builder
-
-RUN cargo build --release --offline
-
-FROM rust:latest-slim-buster
-
-COPY --from=builder /code/target/release/docker_sample /usr/bin/docker_sample
+RUN cargo install --path .
+RUN cargo test
+RUN cargo build --release
 
 EXPOSE 8090
 
-ENTRYPOINT [ "/usr/bin/docker_sample" ]
+CMD ["app"]
+
+ENTRYPOINT ["./target/x86_64-unknown-linux-musl/release/nem_id_code_gen_service"]

@@ -996,6 +996,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "nem_id_code_gen_service"
+version = "0.1.0"
+dependencies = [
+ "actix-rt",
+ "actix-web",
+ "rand",
+ "rusqlite",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
 name = "net2"
 version = "0.2.35"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1219,18 +1231,6 @@ checksum = "11834e137f3b14e309437a8276714eed3a80d1ef894869e510f2c0c0b98b9f4a"
 dependencies = [
  "hostname",
  "quick-error",
-]
-
-[[package]]
-name = "rest-api"
-version = "0.1.0"
-dependencies = [
- "actix-rt",
- "actix-web",
- "rand",
- "rusqlite",
- "serde",
- "serde_json",
 ]
 
 [[package]]

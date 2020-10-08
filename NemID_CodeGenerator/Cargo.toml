@@ -1,5 +1,5 @@
 [package]
-name = "rest-api"
+name = "nem_id_code_gen_service"
 version = "0.1.0"
 authors = ["Martin L. Jensen <martinloesethjensen@gmail.com>"]
 edition = "2018"

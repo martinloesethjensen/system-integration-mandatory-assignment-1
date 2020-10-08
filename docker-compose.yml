@@ -21,10 +21,11 @@ services:
         #build: 
         #container_name:
         #ports: 
-    #nemid_code_generator:
-        #build: 
-        #container_name:
-        #ports:
+    nemid_code_generator:
+        build: NemID_CodeGenerator
+        container_name: nemid_code_generator:v1
+        ports:
+            - "8090:80"
     #nemid_db:
         #build: 
         #container_name:

@@ -10,7 +10,7 @@ cargo run
 
 ```sh
 docker build -t nem_id_code_gen:v1 .
-docker run -t nem_id_code_gen:v1       -------    TODO
+docker run -it --rm --name running_nem_id_code_gen nem_id_code_gen bash -c "cargo run"
 ```
 
 ## Testing the Service
@@ -20,7 +20,7 @@ When the service is up and running then you can test it in the terminal with a s
 ### Authenticate NemID
 
 ```sh
-curl -X POST -H "Content-Type: application/json" \ 
+curl -X POST -H "Content-Type: application/json" \
     -d '{"nemIdCode": "9931", "nemId": "999681231"}' \
     http://127.0.0.1:8090/nemid-auth
 ```
