@@ -8,7 +8,7 @@ WORKDIR /src
 COPY ["User Generator/User Generator.csproj", "User Generator/"]
 RUN dotnet restore "User Generator/User Generator.csproj"
 COPY . .
-WORKDIR "/src/User Generator"
+#WORKDIR "/src/User Generator"
 RUN dotnet build "User Generator.csproj" -c Release -o /app/build
 
 FROM build AS publish
