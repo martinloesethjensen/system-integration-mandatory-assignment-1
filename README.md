@@ -35,6 +35,17 @@ You can get dart via this [link](https://dart.dev/get-dart).
 
 ---
 
+### Running Services with Docker
+
+You can find more information on how to run each service in their README's.
+
+- [Main System README](Main_System/README.md)
+- [NemID Code Generator README](NemID_Code_Generator/README.md)
+- [NemID Password Generator README](README.md) TODO
+- [NemID User Generator README](README.md) TODO
+
+---
+
 ## Running the Client CLI System
 
 In the root project:
