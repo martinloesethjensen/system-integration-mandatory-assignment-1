@@ -1,0 +1,33 @@
+version: "3"
+services: 
+    #cli_legacy_system:
+        #build: 
+        #container_name:
+        #ports: 
+    #legacy_central_system:
+        #build: 
+        #container_name:
+        #ports: 
+    #nemid_esb:
+        #build: 
+        #container_name:
+        #ports: 
+    nemid_user_generator:
+        build: NemID_UserGenerator/User Generator   
+        container_name: NemIDUserGenerator
+        ports: 
+            - "8088:80"
+    #nemid_password_generator:
+        #build: 
+        #container_name:
+        #ports: 
+    #nemid_code_generator:
+        #build: 
+        #container_name:
+        #ports:
+    #nemid_db:
+        #build: 
+        #container_name:
+        #ports: 
+            
+            
