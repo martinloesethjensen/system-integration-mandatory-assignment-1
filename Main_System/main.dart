@@ -4,6 +4,7 @@ import 'dart:math';
 
 import 'package:csv/csv.dart';
 import 'package:http/http.dart' as http;
+import 'package:msgpack2/msgpack2.dart';
 
 main(List<String> args) async {
   // Reads the input we have from the `people.csv`
@@ -43,6 +44,22 @@ main(List<String> args) async {
     if (result.statusCode == 200) {
       final jsonRespone = jsonDecode(result.body);
       person.nemId = jsonRespone['nemID'];
+
+      final file = File('${person.firstName}.msgpack');
+
+      final data = {
+        "f_name": person.firstName,
+        "l_name": person.lastName,
+        "birth_date": person.birthDate,
+        "email": person.email,
+        "country": person.country,
+        "address": person.address,
+        "phone": person.phone,
+        "CPR": person.cpr,
+        "NemID": person.nemId,
+      };
+
+      file.writeAsBytes(serialize(data));
     }
   });
 }

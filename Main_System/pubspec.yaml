@@ -9,6 +9,7 @@ dependencies:
   http: ^0.12.2
   xml: ^4.5.1
   csv: ^4.0.3
+  msgpack2: ^2.0.0+1
 
 dev_dependencies:
   test: ^1.0.0
