@@ -9,6 +9,6 @@ dart main.dart
 ## Dockerfile
 
 ```sh
-docker build -t main_system:v1 .
-docker run -t main_system:v1
+docker build -t main_system .
+docker run -t main_system
 ```

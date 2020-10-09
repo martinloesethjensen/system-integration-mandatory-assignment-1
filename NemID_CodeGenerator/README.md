@@ -9,7 +9,7 @@ cargo run
 ## Dockerfile
 
 ```sh
-docker build -t nem_id_code_gen:v1 .
+docker build -t nem_id_code_gen .
 docker run -it --rm --name running_nem_id_code_gen nem_id_code_gen bash -c "cargo run"
 ```
 
