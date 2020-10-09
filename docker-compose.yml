@@ -1,34 +1,34 @@
 version: "3"
 services: 
-    #cli_legacy_system:
-        #build: 
-        #container_name:
+    cli_legacy_system:
+        build: Client_System/.
+        container_name: Client
+    legacy_central_system:
+        build: Main_System/.
+        container_name: NemIDMainSystem
         #ports: 
-    #legacy_central_system:
-        #build: 
-        #container_name:
-        #ports: 
-    #nemid_esb:
-        #build: 
-        #container_name:
-        #ports: 
+    nemid_esb:
+        build: NemID_ESB/.
+        container_name: NemIDESB
+        ports: 
+            - "8080:8080"
     nemid_user_generator:
         build: NemID_UserGenerator/User Generator   
         container_name: NemIDUserGenerator
         ports: 
             - "8088:80"
-    #nemid_password_generator:
+    nemid_password_generator: #Change to DART implementation once it is pushed
+        build: NemID_PasswordGenerator/.
+        container_name: NemIDPasswordGenerator
+        ports: 
+            - "8089:8089"
+    nemid_code_generator:
+        build: NemID_CodeGenerator/.
+        container_name: NemIDCodeGenerator
+        ports:
+            - "8090:80"
+        command: cargo run
+    #nemid_db: #This may not be necessarry as we store data as .sqlite file --> change to volume
         #build: 
         #container_name:
         #ports: 
-    #nemid_code_generator:
-        #build: NemID_CodeGenerator/.
-        #container_name: NemIDCodeGenerator
-        #ports:
-            #- "8090:80"
-    #nemid_db:
-        #build: 
-        #container_name:
-        #ports: 
-            
-            
