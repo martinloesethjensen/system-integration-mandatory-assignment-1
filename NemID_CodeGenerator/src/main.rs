@@ -24,7 +24,7 @@ struct User {
 fn generate_code() -> String {
     let mut range = thread_rng();
     let mut random_int_string: String = "".to_owned();
-    for _ in 0..5 {
+    for _ in 0..6 {
         let temp: &str = &String::from(range.gen_range(0, 10).to_string());
         random_int_string.push_str(temp);
     }

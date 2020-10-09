@@ -38,6 +38,11 @@ main(List<String> args) async {
         body: person.toXml, headers: {'content-type': 'application/xml'});
 
     print(result.statusCode);
+    print(result.body);
+
+    if (result.statusCode == 200) {
+      // person.nemId =;
+    }
     // TODO Handle the result we get back
   });
 }
@@ -45,6 +50,7 @@ main(List<String> args) async {
 class Person {
   final firstName, lastName, email, birthDate, country, address, phone;
   String cpr;
+  String nemId;
 
   Person({
     this.firstName,

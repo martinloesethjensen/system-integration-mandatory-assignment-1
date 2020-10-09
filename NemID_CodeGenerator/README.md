@@ -8,9 +8,11 @@ cargo run
 
 ## Dockerfile
 
+> Currently the rust server tries to access the database file from [nem id esb db file](../NemID_ESB/nem_id_database.sqlite) and this can not be accessed by the docker container. Therefore, the rust server should be run locally.
+
 ```sh
 docker build -t nem_id_code_gen .
-docker run -it --rm --name running_nem_id_code_gen nem_id_code_gen bash -c "cargo run"
+docker run -it --rm --name running_nem_id_code_gen -p 8090 nem_id_code_gen bash -c "cargo run"
 ```
 
 ## Testing the Service
@@ -27,10 +29,10 @@ curl -X POST -H "Content-Type: application/json" \
 
 If user exists in the db and nemid and password is correct, then the response would be this.
 
-Status code `200` (OK) and output with 5 random number like this.
+Status code `200` (OK) and output with 6 random number like this.
 
 ```json
-{"generatedCode": "{random_five_numbers}"}
+{"generatedCode": "{random_six_numbers}"}
 ```
 
 But if the user does not exist and nemid or password is incorrect then the response would be like this.
