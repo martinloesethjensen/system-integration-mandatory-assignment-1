@@ -1,4 +1,4 @@
-# Running NemID Code Generation
+# Running NemID Code Generator
 
 ## Locally with Rust Installed
 
