@@ -2,6 +2,9 @@
 
 ## Locally with Rust Installed
 
+> If rust is not installed, then you can install it [here](https://www.rust-lang.org/tools/install)
+> You can get `rustup` that has `rustc` and `cargo` with a simple curl command: `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
+
 ```sh
 cargo run
 ```
