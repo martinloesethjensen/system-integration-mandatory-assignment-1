@@ -2,9 +2,15 @@
 
 ## Locally with C# Installed
 
+Prerequisites
+.NET Core 3.1 SDK or later
+
 ```sh
 dotnet build
 dotnet run
+
+To specify port the service listening on
+dotnet run --urls="http://localhost:8088"
 ```
 
 ## Dockerfile
