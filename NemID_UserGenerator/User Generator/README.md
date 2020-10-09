@@ -1,6 +1,6 @@
 # Running NemID User Generation
 
-## Locally with C# Installed
+## Locally with .NET Installed
 
 Prerequisites
 .NET Core 3.1 SDK or later
