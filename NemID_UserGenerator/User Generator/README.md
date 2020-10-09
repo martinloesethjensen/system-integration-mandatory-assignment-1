@@ -37,3 +37,9 @@ The out put should be like this.
 ```json
 {"nemId": "{random_five_numbers}-{four_last_digits_of_cpr}"}
 ```
+
+ ## API documentation
+ ```sh
+ Find Swagger documentation on
+ http://localhost:8088/swagger/index.html
+ ```
