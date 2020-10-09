@@ -41,9 +41,10 @@ main(List<String> args) async {
     print(result.body);
 
     if (result.statusCode == 200) {
-      // person.nemId =;
+      final jsonRespone = jsonDecode(result.body);
+      person.nemId = jsonRespone['nemID'];
+      print(person.nemId);
     }
-    // TODO Handle the result we get back
   });
 }
 
