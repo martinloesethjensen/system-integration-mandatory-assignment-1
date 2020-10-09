@@ -1,6 +1,9 @@
-FROM golang:1.14.3-alpine AS build
-WORKDIR /src
+FROM golang:1.14
+
+WORKDIR /go/src/app
 COPY . .
-RUN go build -o /out/example .
-FROM scratch AS bin
-COPY --from=build /out/example /
+
+RUN go get -d -v ./...
+RUN go install -v ./...
+
+CMD ["app"]
