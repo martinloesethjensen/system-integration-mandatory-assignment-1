@@ -34,16 +34,15 @@ main(List<String> args) async {
   final url = 'http://localhost:8080/nemID';
 
   people.forEach((person) async {
-    final result = await http.post(url,
-        body: person.toXml, headers: {'content-type': 'application/xml'});
-
-    print(result.statusCode);
-    print(result.body);
+    final result = await http.post(
+      url,
+      body: person.toXml,
+      headers: {'content-type': 'application/xml'},
+    );
 
     if (result.statusCode == 200) {
       final jsonRespone = jsonDecode(result.body);
       person.nemId = jsonRespone['nemID'];
-      print(person.nemId);
     }
   });
 }
