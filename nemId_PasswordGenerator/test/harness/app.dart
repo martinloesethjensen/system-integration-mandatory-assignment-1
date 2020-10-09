@@ -1,7 +1,7 @@
-import 'package:my_project/my_project.dart';
 import 'package:aqueduct_test/aqueduct_test.dart';
 
-export 'package:my_project/my_project.dart';
+import '../../lib/channel.dart';
+
 export 'package:aqueduct_test/aqueduct_test.dart';
 export 'package:test/test.dart';
 export 'package:aqueduct/aqueduct.dart';
@@ -19,7 +19,7 @@ export 'package:aqueduct/aqueduct.dart';
 ///           });
 ///         }
 ///
-class Harness extends TestHarness<MyProjectChannel> {
+class Harness extends TestHarness<NemIdPassGenChannel> {
   @override
   Future onSetUp() async {
 

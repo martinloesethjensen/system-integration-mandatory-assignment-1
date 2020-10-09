@@ -1,4 +1,4 @@
-import 'package:my_project/my_project.dart';
+import 'package:aqueduct/aqueduct.dart';
 
 class PasswordGenController extends ResourceController {
   @Operation.post()

@@ -1,8 +1,11 @@
 
-import 'package:my_project/my_project.dart';
+import 'package:aqueduct/aqueduct.dart';
+
+import '../lib/channel.dart';
+import '../lib/nemid_passwordgenerator.dart';
 
 Future main() async {
-  final app = Application<MyProjectChannel>()
+  final app = Application<NemIdPassGenChannel>()
       ..options.configurationFilePath = "config.yaml"
       ..options.port = 8089;
 

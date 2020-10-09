@@ -1,5 +1,5 @@
-name: my_project
-description: An empty Aqueduct application.
+name: nemid_passwordgenerator
+description: An Aqueduct application.
 version: 0.0.1
 author: stable|kernel <jobs@stablekernel.com>
 

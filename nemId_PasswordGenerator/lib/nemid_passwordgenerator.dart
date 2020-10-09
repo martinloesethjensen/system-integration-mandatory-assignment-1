@@ -1,6 +1,3 @@
-/// my_project
-///
-/// A Aqueduct web server.
 library nemID_PasswordGenerator;
 
 export 'dart:async';
