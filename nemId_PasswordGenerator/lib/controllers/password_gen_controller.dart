@@ -1,4 +1,5 @@
 import 'package:aqueduct/aqueduct.dart';
+import 'package:nemid_passwordgenerator/nemid_passwordgenerator.dart';
 
 class PasswordGenController extends ResourceController {
   @Operation.post()
@@ -9,6 +10,7 @@ class PasswordGenController extends ResourceController {
     return Response.ok({
       "nemIdPassword":
           "${nemid.substring(0, 2)}${cpr.substring(cpr.length - 2, cpr.length)}"
-    });
+    })
+      ..contentType = ContentType.json;
   }
 }
