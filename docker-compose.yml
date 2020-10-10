@@ -1,11 +1,11 @@
 version: "3"
 services: 
-    cli_legacy_system:
-        build: Client_System/.
-        container_name: Client
-    legacy_central_system:
-        build: Main_System/.
-        container_name: NemIDMainSystem
+    # cli_legacy_system:
+    #     build: Client_System/.
+    #     container_name: Client
+    # legacy_central_system:
+    #     build: Main_System/.
+    #     container_name: NemIDMainSystem
         #ports: 
     nemid_esb:
         build: NemID_ESB/.
