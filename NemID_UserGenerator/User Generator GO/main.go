@@ -1,29 +1,28 @@
 package main
 
 import (
-	"fmt"
 	"encoding/json"
-	"log"
-	"net/http"
+	"fmt"
 	"github.com/gorilla/mux"
+	"log"
 	"math/rand"
-	"strings"
+	"net/http"
 	"strconv"
+	"strings"
 )
 
-
 type User struct {
-	CPR    string  `json:"cpr"`
-	Email   string  `json:"email"`
+	CPR   string `json:"cpr"`
+	Email string `json:"email"`
 }
 
 type NemID struct {
-	NemID	string	`json:nemId`
+	NemID string `json:nemId`
 }
 
-func main(){
+func main() {
 	fmt.Println("NemID User Generator running on port 8088...")
-	r:= mux.NewRouter()
+	r := mux.NewRouter()
 	r.HandleFunc("/generate-nemID", GenerateNemID).Methods("POST")
 	log.Fatal(http.ListenAndServe(":8088", r))
 }
@@ -36,9 +35,9 @@ func GenerateNemID(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	json.NewDecoder(r.Body).Decode(&user)
 
-    for i := 0; i < 5; i++ {
-        str.WriteString(strconv.Itoa(rand.Intn(9-0 + 1) + 0))
-    }
+	for i := 0; i < 5; i++ {
+		str.WriteString(strconv.Itoa(rand.Intn(9-0+1) + 0))
+	}
 
 	response.NemID = str.String() + "-" + string(user.CPR[len(user.CPR)-4:])
 	json.NewEncoder(w).Encode(response)
