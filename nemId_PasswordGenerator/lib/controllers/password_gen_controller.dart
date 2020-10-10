@@ -4,7 +4,7 @@ import 'package:nemid_passwordgenerator/nemid_passwordgenerator.dart';
 class PasswordGenController extends ResourceController {
   @Operation.post()
   Future<Response> genPass() async {
-    Map<String, dynamic> bodyMap = request.body.as();
+    final Map<String, dynamic> bodyMap = request.body.as();
     final String nemid = bodyMap["nemId"] as String;
     final String cpr = bodyMap["cpr"] as String;
     return Response.ok({
